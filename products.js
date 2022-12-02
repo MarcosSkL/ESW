@@ -41,9 +41,19 @@ function listar() {
   };
   
   listar_por_categoria("Eletrônico");
-  
-  
 
+  const listar_por_valor = (valor_minimo, valor_maximo) => {
+    for (let i = 0; i < produtos.length; i++) {
+      if (
+        produtos[i].valor >= valor_minimo &&
+        produtos[i].valor <= valor_maximo
+      ) {
+        console.log(produtos[i]);
+      }
+    }
+  };
+  
+  listar_por_valor(5, 10);
 
 function listar() {
     produtos.forEach(p => {
